@@ -1,7 +1,9 @@
-```function cheat(address payable _adr, uint256 _gas) public payable {
+```
+function cheat(address payable _adr, uint256 _gas) public payable {
     (bool sent, ) = _adr.call{value: msg.value, gas: _gas}("");
     require(sent, "Failed to send value!");
- }```
+}
+```
  
  * Create a contract with that instance
  * Create a fallback that revert for instance
